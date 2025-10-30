@@ -1,0 +1,38 @@
+<html>
+    <head><title>表格</title></head>
+    <!--讓表格有雙框線效果-->
+    <table border="1">
+        <!--表格第一行-->
+        <tr>
+            <td>1</td><td>2</td><td>3</td>
+        </tr>
+        <!--表格第二行-->
+        <tr>
+            <td>4</td><td>5</td><td>6</td>
+        </tr>
+    </table>
+    <!--colspan 合併 行-->
+
+    <table border="1">
+        <!-- colspan=2 儲存格合併兩格 2 和 3-->
+        <tr>
+            <td>1</td><td colspan=2>2 3</td>
+        </tr>
+        <tr>
+            <td>4</td><td>5</td><td>6</td>
+        </tr>
+    </table>
+    <!--Rowsoan 合併 列-->
+    <table border="1">
+        <!--合併上下1和4-->
+        <tr><td rowspan=2>1 4</td><td>2</td><td>3</td></tr>
+        <tr>                  <td>5</td><td>6</td></tr>
+    </table>
+
+    <table border="1">
+        <!--合併 列 2356-->
+        <tr><td>1</td><td colspan=2 rowspan=2>2 3 5 6</td></tr>
+        <tr><td>4</td>                                     </tr>
+        <tr><td>7</td><td>8</td><td>9</td></tr>
+    </table>
+</html>
