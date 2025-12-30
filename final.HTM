@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>Go Trip!｜旅遊景點介紹</title>
+    <meta charset="utf-8">
+
+    <!-- FlexSlider -->
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+
+    <script>
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+
+    <style>
+        *{
+            margin:0;
+            text-align:center;
+            box-sizing: border-box;
+        }
+
+        body{
+            color: gray;
+            font-family: Arial, sans-serif;
+        }
+
+        .top{
+            background-color: #F4F1EC;
+        }
+        .top .container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:10px 30px;
+        }
+        .logo{
+            font-size:32px;
+            font-weight:bold;
+            color:#0B3C5D;
+        }
+        .logo img{
+            width:80px;
+            vertical-align:middle;
+        }
+        .top-nav a{
+            margin-left:20px;
+            text-decoration:none;
+            font-size:20px;
+            color:#0B3C5D;
+            font-weight:bold;
+        }
+
+        .nav{
+            background-color:#0B3C5D;
+            display:flex;
+            justify-content:center;
+        }
+        .nav ul{
+            list-style:none;
+            display:flex;
+        }
+        .nav li{
+            position:relative;
+        }
+        .nav li a{
+            display:block;
+            padding:18px 70px;
+            color:white;
+            text-decoration:none;
+        }
+        .nav li a:hover{
+            background-color:#328CC1;
+        }
+
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            top:100%;
+            left:0;
+            background-color:#F4F1EC;
+            min-width:160px;
+            z-index:10;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        .dropdown-content a{
+            display:block;
+            padding:12px 16px;
+            color:white;
+            background-color:#328CC1;
+            text-align:left;
+        }
+        .dropdown-content a:hover{
+            background-color:#0B3C5D;
+        }
+
+        .slider{
+            width:100%;
+            overflow:hidden;
+        }
+        .flexslider .slides img{
+            width:100%;
+            height:500px;
+            object-fit:cover;
+        }
+
+        .banner{
+            background-image: linear-gradient(#328CC1, #0B3C5D);
+            padding:40px 20px;
+        }
+        .banner h1{
+            color:white;
+            padding:15px 0;
+        }
+
+        .faculty{
+            padding:50px 20px;
+            background-color:white;
+        }
+        .faculty h2{
+            color:#0B3C5D;
+            margin-bottom:40px;
+        }
+        .faculty .container{
+            display:flex;
+            justify-content:space-between;;
+            gap:40px;
+
+            width:100%;          
+            max-width:1200px;    
+            margin:0 auto; 
+            
+        }
+        .attractions{
+            text-decoration:none;
+        }
+        .attractions img{
+            width:200px;
+            height:200px;
+            object-fit:cover;
+        }
+        .attractions h3{
+            background-color:rgba(0,0,0,0.6);
+            color:white;
+            padding:10px;
+        }
+
+        .contact{
+            padding:40px 20px;
+        }
+        .contact h2{
+            color:#0B3C5D;
+            margin-bottom:20px;
+        }
+        .infos{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+        }
+        .left{
+            text-align:left;
+        }
+        .left b{
+            display:block;
+            margin-top:10px;
+            color:#333;
+        }
+        .left span{
+            display:block;
+            margin-left:20px;
+            color:#666;
+        }
+        iframe{
+            width:300px;
+            height:200px;
+            border:0;
+        }
+
+        .footer{
+            background-color:#1a1a1a;
+            color:white;
+            padding:20px;
+            font-size:14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top">
+    <div class="container">
+        <div class="logo">
+            <img src="https://github.com/Boen0624/HTML-/blob/main/logo.png?raw=true">
+            Go Trip!
+        </div>
+        <div class="top-nav">
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <ul>
+        <li><a href="#">首頁</a></li>
+        <li><a href="#introduction">地區</a></li>
+        <li class="dropdown">
+            <a href="#">景點介紹</a>
+            <div class="dropdown-content">
+                <a href="#hot">墾丁</a>
+                <a href="#hot">蘭嶼</a>
+                <a href="#hot">花蓮</a>
+                <a href="#hot">澎湖</a>
+                <a href="#hot">小琉球</a>
+            </div>
+        </li>
+        <li><a href="#about">相關資訊</a></li>
+    </ul>
+</div>
+
+<div class="slider">
+    <div class="flexslider">
+        <ul class="slides">
+            <li><img src="https://github.com/Boen0624/HTML/blob/main/kenting-coastline-in-Taiwan-featured.jpg?raw=true"></li>
+            <li><img src="https://github.com/Boen0624/HTML/blob/main/b599c4e1-02c4-4f4e-b298-a284a1d92352.png?raw=true"></li>
+            <li><img src="https://github.com/Boen0624/HTML/blob/main/alishan-1129991_640.jpg?raw=true"></li>
+             <li><img src="https://github.com/Boen0624/HTML/blob/main/taiwan-5273180_1280.jpg?raw=true"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="banner" id="introduction">
+    <h1>探索台灣最美風景</h1>
+    <h1>海洋・山林・秘境</h1>
+    <h1>開啟你的旅程</h1>
+</div>
+
+
+<div class="faculty" id="hot">
+    <h2>景點介紹<h2>
+    <div class="container">
+        <a class="attractions">
+            <img src="https://www.agoda.com/wp-content/uploads/2024/07/kenting-coastline-in-Taiwan-featured.jpg">
+            <h3>墾丁</h3>
+        </a>
+        <a class="attractions">
+            <img src="https://github.com/Boen0624/HTML/blob/main/transport-system-3327292_640.jpg?raw=true">
+            <h3>阿里山</h3>
+        </a>
+        <a class="attractions">
+            <img src="https://github.com/Boen0624/HTML/blob/main/b599c4e1-02c4-4f4e-b298-a284a1d92352.png?raw=true">
+            <h3>蘭嶼</h3>
+        </a>
+         <a class="attractions">
+            <img src="https://github.com/Boen0624/HTML/blob/main/taiwan-5273180_1280.jpg?raw=true">
+            <h3>澎湖</h3>
+        </a>
+         <a class="attractions">
+            <img src="https://github.com/Boen0624/HTML/blob/main/%E8%8A%B1%E7%93%B6%E5%B2%A9.jpg?raw=true">
+            <h3>小琉球</h3>
+        </a>
+    </div>
+</div>
+
+
+<div class="contact" id="about">
+    <h2>相關資訊</h2>
+    <div class="infos">
+        <div class="left">
+            <b>Go Trip! 客服中心</b>
+            <span>台灣旅遊資訊平台</span>
+            <b>電話</b>
+            <span>02-1234-5678</span>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57840.18805162603!2d121.4886654486328!3d25.03367519999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6e9d93249%3A0xd508f7b3aa02d931!2z5Y-w5YyXMTAx6KeA5pmv5Y-w!5e0!3m2!1szh-TW!2stw!4v1767107205203!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+    </div>
+</div>
+
+
+<div class="footer">
+    © 2025 Go Trip! All Rights Reserved.
+</div>
+
+</body>
+</html>
